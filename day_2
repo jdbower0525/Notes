@@ -1,0 +1,238 @@
+October 25th (Day_2)
+
+Review of Day_1:
+DATA TYPES:
+int_number = 5
+float_number = 3.14
+dq_string = “double quotes”
+sq_string = ‘single quotes’
+tdq_string = “””triple double quotes”””
+tsq_string = ‘’’triple single quotes’’’
+odd_string = “”” demo of ‘’’ \”\”\”\”\”\”\”\” ‘’’ “””
+true = True
+false = False
+
+VARIABLES & OPERATORS
+Use meaningful variable names.
+pi = 3.14159
+e = 2.78
+print(pi > e)
+print(pi >= pi)
+print(pi == pi)
+print(pi < e)
+print(pi <= e)
+“placeholder curly braces {}”.format(5)
+	>>>’placeholder curly braces 5’
+use {0:.2f} to limit to 2 decimal places
+“placeholder curly braces {0:.2f}”.format(5)
+	>>>’placeholder curly braces 5.00’
+
+Casting is getting a copy of an object that is a different type.
+a = 5
+b = str(a)
+c = int(b)
+print(type(a))
+print(type(b))
+print(type(c))
+<class ‘int’>
+<class ‘str’>
+<class ‘int’>
+
+
+Debugging:
+
+FUNCTION:
+def is_leap(year):
+	#your code goes here
+	return “whether year was a leap year or not”
+
+Functions
+
+
+CONDITIONALS
+Branching logic:
+if == The first check you will do
+elif == If the first
+
+a = 5
+b = 5
+if a < b:
+	print(“a is less than b”)
+elif: a == b:
+	print(“a is equal to b”)
+else:
+	print(“a is not less than b”)
+
+IF ALL ARE TRUE, ONLY THE FIRST TRUE ONE RUNS
+
+EXCEPTIONAL
+try:
+	print(“try”)
+except:
+	print(“except”)
+else:
+	print(“else”)
+finally:
+	print(“finally”)
+>>>try
+>>>else
+>>>finally
+
+
+—————————————————————
+try:
+	raise Exception()
+	print(“try”)
+except:
+	print(“except”)
+else:
+	print(“else”)
+finally:
+	print(“finally”)
+>>>except
+>>>finally
+
+LISTS
+my_list = [1,2,3,4,5,6,7,8,9,0,10]
+print(my_list)
+print(my_list[4])
+>>>5
+print(len(my_list))
+print(my_list.sort())
+	DOESN’T RETURN A SORTED LINE
+print(sorted(my_list))
+>>>[0,1,2,3,4,5,6,7,8,9,10]
+
+my_odd_list = [5, “hi mom”, True, False, [“sublist”, 5.5], print]
+print(my_odd_list[4][1])
+>>> 5.5
+print(my_odd_list[1][1])
+>>> i
+my_odd_list[-1] = “print”
+	[-1] is now “print”
+STRINGS ARE NOT MUTABLE
+
+other_list = my_odd_list
+
+
+del = removes items by index
+del(my_odd_list[0])
+remove = removes by value
+remove(my_odd_list(5.5))
+my_odd_list.append(“caboose”)
+	adds “caboose” to the end of the list
+my_odd_list + [1,2,3,4]
+ so the ‘+’ extends by that list
+my_odd_list.append([1,2,3,4])
+ adds that list to the end of the list
+max([list])
+min([list])
+sum([list])
+
+Convert sequences to list
+list(“Hi Mom”)
+[H, i, ‘’, M, o, m]
+“Hi Mom”.split()
+[Hi, Mom]
+“Hi Mom”.split(“m”)
+[Hi ,m, om,]
+
+if 100 in my_odd_list:
+	print(my_odd_list.index(100))
+
+one_hundred = [0,1,2,3,4,5….]
+one_hundred = range(0, 100, 3)
+   so 0 -> 100 skipping 3
+print(list(one_hundred))
+
+
+
+
+SLICING
+my_odd_list[2:4]
+>>> [True, False]
+	‘Cuts’ out the two out’
+my_odd_list[-1]
+>>> <function print>
+
+
+LOOPS
+while loops will go an indefinite amount of time
+
+for each_element in my_odd_list:
+	print(each_element)
+for i in range(len(my_odd_list)):
+	print(i, my_odd_list[i])
+for what_will_i_get in “hi Mom”:
+	print(what_will_i_get)
+
+i = 0
+while i < len(my_odd_list):
+	i += 1
+	print(i, my_odd_list[i])
+	
+
+FUNCTIONS
+All functions have a return value
+Functions are defined by the keyword def
+Make function names meaningful
+def function(argument):
+
+def function_with_no_arguments():
+	pass
+
+def function_with_two_args(arg1, arg2):
+	pass
+print(function_with_two_args(1, 2)):
+	pass
+
+def add(a, b):
+	return a + b
+
+print(add(5, 6))
+new_variable = add(5,6)
+
+def return_two(one, two):
+	return two, one
+lhs = return_two(4,5):
+print(lhs)
+>>> 5 4
+
+SCOPE
+super_hero = ‘Batman’
+
+def destroy_villain():
+	super_hero = ‘Ironman’
+	print(super_hero + ‘ will destroy the villain!’)
+
+def save_city():
+	print(super_hero + ‘ is coming to save the day!’)
+
+save_city()
+destroy_villain()
+>>> Ironman will destroy the villain!
+>>> Batman is coming to save the day!
+
+def weird(my_list):
+	my_list = []
+a_list = [1,2,3,4,5]
+print(a_list)
+weird(a_list)
+print(a_list)	
+
+>>>[1,2,3,4,5]
+>>>[1,2,3,4,5]
+
+if
+def weird(my_list):
+	my_list.append(6)
+	my_list = []
+vs. my_list[3] = []
+
+
+DEFAULT ARGUMENT
+def greet(name, greeting = “G’day”, sep= “ “):
+	print(greeting + sep + name)
+
+
+

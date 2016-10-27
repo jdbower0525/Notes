@@ -1,0 +1,175 @@
+October 24th (Terminal & Introduction to Python)
+
+	 (Introduction to the Course)
+
+Name/Occupation/Purpose/Hobby/Where
+
+Daily Schedule and Homework (checking on TIYO for policy and homework changes)
+'Caffeine' (App for keeping computer from going to sleep)
+One on Ones every 3 weeks or so to review status
+Monday - Wednesday, homework due by midnight
+Thursday has a longer assignment to work Friday and the weekend
+Not Submitted/Incomplete/Complete but not satisfactory/Satisfactory/Exceeds Expectations
+
+	(Terminal)
+
+Files and directories (collections of files)
+Quicksilver/Alfred (application launchers) 
+Commands - 
+	Generally shows user path ex. /Users/sam.boyarsky $
+	Anatomy of UNIX command - Command Name, Options (-r or --help), Arguments (destination or file names)	
+	man == manual (man echo)
+	pwd == print working directory
+	mkdir == make a directory
+	ls == list files and directories
+	echo == prints output
+	-n == turns off the 'new line' will print prompt directly after output
+	--help == shows help file for that command (git --help)
+	-l == long format (ls -l shows long format of ls print)
+	-a == print all (ls -a shows all hidden files in ls print)
+	cd == change directory (cd test moves you into the 'test' directory)
+	cat == shows text in the terminal
+	open == opens text file in a different window
+ 	touch == opens a file of undetermined extension (touch number_one_hit.mp3)
+	rm == remove (rm number_one_hit.mp3)
+	-i == prompts a 'are you sure' message
+	. == current location (ls . shows ls of current directory)
+	.. == parent (the directory directly above your current)
+	~ == home directory, including user (/USER/john.d.bower)	
+	mv == move file to a directory (uses file name and directory as an argument)
+	cp == copy a file into a directory (cp java languages/Java) <— changes name after the copy
+	Ending a directory with / makes sure the terminal knows that it’s a directory
+	cp/mv have the ability to completely overwrite files, so be careful
+		(rm letters/* removes the directory letters and all files inside)
+	rmdir == remove directory, directory must be empty
+	
+	* uses a ‘wild card’ to match files, so mv *.py will move all .py
+
+	chmod == changes moderation of permissions of a file
+		octal representation of permissions rwx = 7
+	chown == change owner of a file
+	sudo == Super User DO
+	wc == word count (lines/words/characters)
+	grep == searches for something so grep zz ~/user/
+	PIPING == vertical line (|), takes the output of one command and makes it the input of the next command
+	grep /usr/share/dict/words | wc (takes grep and runs it through the wc command)
+	> == redirects output into a new file (echo echo > aNewFile)
+	>> == redirects output to append an existing file (echo echo >> aNewFile)
+	ctrl-c == ‘quit current process’
+
+Highest directory path is MACHD (represented on console with a /)
+So cd / sends you straight to the hard drive
+'VMWare' free virtual machine
+
+	(Introduction to Python)
+
+Everything in python is an object.
+Objects have state, identity, and behavior. (what they know, who they are, what they can do)
+
+Numbers (integers and floats)
+help(5) - will show integer object
+help(5.5) - will show float help
+type(5) - shows type of data, ints/floats/stings/
+5/5 = returns a float
+5//5 = returns an integer (rounds down and prints and integer)
+7%5 = shows remainder of division (modulo)
+
+Strings (sets of words)
+“This is a string”
+‘This is also a string’
+“‘This is a string’ with a quote in it”
+“””This is
+a multiple
+line string”””
+type(“string”) = str
+“hi mom”.capitalize()
+>> Hi mom
+“hi mom”.upper()
+>> HI MOM
+dir(“”) == prints out everything that’s available for a string
+dir(int) == prints out everything that an integer is capable of doing
+“Hi” + “Mom”
+HiMom
+“HiMom” * 5
+HiMomHiMomHiMomHiMomHiMom
+
+Boolean (True/False)
+type(True) = bool
+type(False) = bool
+Tool for comparatives
+5 > 6 = False
+6 > 5 = True
+
+! == ‘bang’ or (negation)
+!= == not equal to
+and/or statements for booleans
+
+‘is’ = comparative so 5 is 5 = True
+Can be used to searches
+“hi” in “hi mom” = True
+“Hi” in “hi mom” = False (case sensitive)
+
+favorite_string = “hi mom” (makes favorite_string pull up the string “hi mom”)
+type(favorite_string) = str
+favorite_sting = 5
+type(favorite_string) = int
+
+str(5) = changes the int(5) to become a string
+so “favorite_string” + str(5) == favorite_string 5
+favorite_number += 22 (assigns favorite_number to favorite_number + 22)
+
+
+Variables
+The symbol = is no longer equals (assignment operator)
+Should be ‘assigns’ or ‘calls’ or ‘gets’ when assigning variables
+Give variables meaningful names, shouldn’t be ambiguous or misleading
+
+Input & Output
+input(“Calls for user input”)
+print(“Prints this to the console”)
+
+Type of ‘None’
+type(None)
+<class ‘NoneType’>
+
+If statements
+user_name = input(“What is your name? “)
+if user_name = “Sam”:
+	print(“Hello Instructor”)
+IF STATEMENTS MUST BE FOLLOWED BY A BOOLEAN
+
+pass = placeholder (does nothing)
+
+While Loop (another boss statement)
+a = 40
+while a> 0:
+	a -= 1
+	print(a)
+
+	(prints 39-0)
+while a> 0:
+	print(a)
+	a -=1
+
+	(prints 40-1)
+
+break = end loop immediately
+continue = skip rest of the loop and restart
+
+Empty strings are Falsey, any other length strings are Truthy
+The int 0 is Flasey, all other integers are Truthy
+
+End while loops by taking out the indentation
+
+try: (another boss statement)
+   int(input(“enter a number”)
+
+try:
+	int(“hi mom:)
+except ValueError:
+	print(“that wasn’t a valid int”)
+
+$ python3 == pulls a python shell into the terminal
+
+
+	

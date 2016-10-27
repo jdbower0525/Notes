@@ -1,0 +1,142 @@
+October 26th
+
+Day 2 Review
+
+def lhs(boolean):
+	print(“lhs”)
+	return boolean
+def rhs(boolean):
+	print(“rhs”)
+	return boolean
+
+if lhs(True) and rhs(True):
+	print(“both were true”)
+>>>lhs
+>>>rhs
+>>>both were true
+
+If the first boolean is False, it doesn’t run through the second boolean
+
+if len(my_day) >= 5 and my_day[5] == “lunch”:
+	THIS WILL NOT THROW AN INDEX ERROR IF THE LIST IS SHORTER THAN 5
+
+if lhs(True) or rhs(True):
+	print(“at least one is true”)
+
+if lhs(False) or rhs(True):
+>>>lhs
+>>>rhs	
+
+if lhs(True) or rhs(False):
+>>>lhs
+
+if a and b or c:
+	BAD CODE
+if a and (b or c):
+if (a and b) or c:
+
+def my_function():
+	“””Help about the function.  Describe inputs and outputs”””
+
+help(my_function)
+	calls the doc_string
+
+type(my_function())
+>>>noneType
+type(my_function)
+>>>class ‘function’
+
+DAY 3
+github setup
+Recursive magic
+
+Git 
+A distributed version control system.
+	version control = monitor changes
+Github
+GitHub is a web-based Git repository hosting service.
+
+Github Basics
+git init . (creates a repository in the current directory)
+git status (shows branches and commits)
+touch recursion.py (creates file recursion.py)
+git add recursion.py (adds recursion.py to commit)
+git add . (adds all files that are uncommitted)
+git commit -m “meaningful message” (commits new files)
+
+Setting up for a python3 directory
+
+$echo layout python3 > .envrc
+$direnv allow
+$python —-version
+$echo .DS_Store >> .gitignore
+$echo .evnrc >> .gitignore
+$echo .direnv >> .gitignore
+$git add .gitignore
+$git commit -m “Add .DS_Store, .envrc, and .direnv to .gitignore”
+$git push
+
+RECURSIONS
+a function that calls itself
+def function():
+	recursion()
+(This will return an infinite loop)
+MUST BE ABLE TO TELL THE RECURSION LOOP WHEN TO STOP
+
+def print_nums(n):
+	#base case
+	if n <= 0:
+		return
+	print(n)
+	print_nums(n-1)
+call by print_nums(10)
+
+
+def print_list(my_list):
+	#base case
+	if len(my_list) == 0:
+		return
+	first = my_list[0]
+	rest = my_list[1:]
+	print(first)
+	print_list(rest)
+print_list([“I am”, “skeptical”, “that”, “this”, “will”, “work”])
+
+def print_list(my_list):
+	#base case
+	if len(my_list) == 0:
+		return
+	first = my_list[0]
+	rest = my_list[1:]
+	print_list(rest)			CHANGING THE ORDER OF THE PRINTS REVERSED THE LIST
+	print(first)
+
+def print_list(my_list):
+	#base case
+	if len(my_list) == 0:
+		return
+	first = my_list[0]
+	rest = my_list[1:]
+	print_list(rest)			CHANGING THE ORDER OF THE PRINTS REVERSED THE LIST
+	print(first)
+	print_list(rest)
+
+
+
+Recursion Steps:
+1)Define base case(s)
+2)Break problem into first + rest
+3*)Do work on first
+4*)Recurse on rest
+	*steps 3 and 4 might be reversible
+
+def min_list(my_list):
+	if len(my_list) == 1:
+		return my_list[0]
+	first = my_list[0]
+	rest = my_list[1:]
+	min_rest = min_list(rest)
+	if first < min_rest
+		return first
+	else:
+		return min_rest
