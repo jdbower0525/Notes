@@ -1,0 +1,164 @@
+
+
+October 27th
+
+Review of Day_3
+reversing the palindromic function to use recursive on different iterables.
+
+def clean_sentence(sentence):
+	out_str = “”
+	for char in sentence:
+		if char.isalpha():
+			out_str.append(char.lower())
+	return out_str
+
+
+#recursive flip
+
+def is_palindrome(sentence):
+
+def rev_word(word):
+	if len(word) <= 1:
+		return word
+	#return word[-1] + rev_word(word[:-1])
+	return rev_word(word[1:]) + word[0]
+
+#iterarive compare the characters
+
+def is_palindrome(sentence):
+	“””iterative compare the characters”””
+	sentence = clean_sentence(sentence)
+	for i range(len(sentence//2)):
+		if sentence[i] != sentence[-(i+1)]:
+			return False
+	return True
+
+
+import os.path
+import os
+	(gives you access to operating system specific functions)
+print(os.listdir(“/Users/sam.boyarsky/cohorts/2016_10/prework”)
+	(shows all files in ~/prework)
+def walk_tree(path):
+	for entry in os.listdir(path):
+		#1 if it is a file, print the filename
+		#2 if it is a directory, walk_tree of the directory
+		if os.path.isdir(path + os.sep + entry):
+			walk_tree(path + os.sep + entry)
+		else:
+			print(path + os.sep + entry)
+
+DAY 4
+DATA STRUCTURES
+immutable/mutable
+	(can or cannot be changed)
+Lists are the only mutable data type we’ve seen so far.
+
+DICTIONARIES
+{Key:Value}
+	keys can only be immutable objects (so not lists or dictionaries)
+
+dictionary = {}
+print(type(dictionary))
+print(help(dictionary))
+print(dir(dictionary))
+
+dictionary = {“lunch”:“pizza”, “dinner”:“ramen”, “breakfast”:”coffee”}
+dictionary [“lunch”]
+>>> “pizza”
+ADDING A VALUE IN A DICTIONARY
+dictionary[“snack”] = [Chocolate covered espresso beans]
+
+dictionary.get(“elevensies”)
+	(doesn’t throw an exception)
+“snack” in dictionary
+>>> True
+“coffee” in dictionary
+>>> False
+	(cannot .get values, only keys)
+
+for key in dictionary:
+	print(key, dictionary[key])
+
+for key, value in dictionary.items():
+	print(key, value)
+
+DELETING ITEMS OUT OF A DICTIONARY
+del(dictionary[“snack”])
+
+TUPLES (defined using parentheses)
+Immutable lists basically
+(1,2)
+one_element_list = [1]
+one_element_tuple = (1,)
+unpacking a tuple into multiple variables
+def return_two():
+	return “hi”, “mom”
+>>> t = return_two()
+>>> t = (‘hi’ , ‘mom’)
+>>> lhs, hrs = return_two()
+>>> lhs
+>>> ‘hi’
+>>> rhs
+>>> ‘mom’
+
+tuples can be sliced and accessed like lists
+list(a,b) == [a,b]
+
+SET
+A set is an unordered list.  ‘set’ is mutable, ‘frozenset’ is not
+
+my_list = [“stuff”, “more_stuff”, “things”, “things”, “that”, “status”, “stuff”]
+my_set = set(my_list)
+CANNOT HAVE DUPLICATES IN A SET
+another_set = {1,2,3,4} 
+
+
+def build_phonebook():
+	phonebook = {}
+	while True:
+		name = input(“What name would you like to add? “)
+		if name == “”:
+			return phonebook
+		number = input(“what number would you like to add? “)
+		phonebook[name] = number
+
+build_phonebook()
+phonebook = build_phonebook()
+
+for name, number in sorted(phonebook.items()):
+	print(name, number)
+
+
+FILE I/O (input/output)
+Reading and writing from/to files
+open(filename, “”)
+
+with, in the context of open, at the end of the block, it will close the file
+
+with open(“/Users/sam.boyarsky/cohorts/2016_10/preework/students.txt”, “r”) as f:
+	print(type(f.read())
+
+	for line in f:
+		print(line, end=‘’)
+
+
+with open(“new_file.txt”, “w”) as f:
+	f.write(“1”)
+	f.write(“2”)
+	f.write(“3”)
+>>>123
+
+with open(“new_file.txt”, “w”) as f:
+	f.write(“1\n”)
+	f.write(“2\n”)
+	f.write(“3\n”)
+1
+2
+3
+
+with open(“another_file.txt”, “a”) as f:
+	f.write(“letter_name\nsam”
+	f.write(“r’s\n”)
+	f.write(“cars\n)
+	
