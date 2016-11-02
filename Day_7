@@ -1,0 +1,60 @@
+November 1st
+
+Homework Review
+
+pep8
+pythonic program
+
+Object Oriented Programming
+
+‘Make sure that you do this’
+Inheritance is not used as much
+1 object, 1 purpose
+interconnectedness is often too complex
+
+
+TEST DRIVEN DEVELOPMENT
+Red - Write a test that doesn’t pass
+      Run the test (to watch it fail)
+
+Green - Write code to pass the test
+	Run the test (to watch it pass)
+
+Refactor - Remove duplicate code
+	    Reduce complexity
+	    Improve code
+	    Push to github
+
+__init__ is a constructor
+__init__ is the function that is called when you create a new instance of the class
+
+Class being the blueprint
+Instances being the objects created using the blueprint
+
+class Test:
+	def do_something(self):
+		print(“I did something”)
+>>> t = Test()
+>>> t.do_something()
+I did something
+
+
+__eq__
+a == b
+a.__eq__(b)
+
+
+od = Currency(‘USD’, 1)
+od.known_currency_symbols
+>>> prints dict
+
+od.known_currency_symbols[‘just for fun’] = ‘now watch this’
+
+
+
+list of actors
+list of classes
+	for each class, attributes and their types
+		methods you’ll need
+		describe inputs and outputs
+design pseudo code

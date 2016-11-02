@@ -1,0 +1,128 @@
+October 31st
+
+Homework review (Hangman Game)
+
+class HangmanGame:
+	def __init__(self):
+		self.word = “”
+		self.word_list = []
+		self.guesses = []
+	def play():
+		while not self.is_game_over():
+			self.handle_user_input()
+			self.update()
+			self.draw()
+
+def main():
+	hg = HangmanGame()
+	while ask_user_if_they_want_to_play():
+		hg.play()
+
+OBJECT ORIENTED PROGRAMMING
+	Object is a ‘thing’ that has some value.
+	“Single entry”
+vi.example
+	def say_hi_mom():
+		print(“Yo, wazzup, mom”)
+	def main():
+		print(“charlie brown’s teacher says: wah wah wah wah”)
+	print(“Hi mom”)
+>>>Hi mom
+
+import example
+>>>Hi mom
+example.main()
+>>>charlie brown’s teacher….
+example.say_hi_mom()
+>>>Yo, wazzup, mom
+
+if __name__ == “__main__”:
+	print(__name__)
+	print(“Hi Mom”)
+
+This allows us to import a program without running it.
+
+MODULES
+import random
+OR from random import randint, choice
+
+EXCEPTIONS
+create your own exception cases that catch bad user input
+raise Exception(“tell her something bad happened”)
+class BadInputError(Exception)”
+	pass
+
+class MyIndexError(IndexError):
+	pass
+
+try:
+	raise BadInputError
+except BadInputError:
+	print(“There was a bad input”)
+
+def check_input(string):
+	if len(string) < 1:
+		raise Not EnoughCharactersError()
+	elif len(string) > 1:
+		raise TooManyCharactersError()
+
+TEST DRIVEN DEVELOPMENT
+class Foo():
+	pass
+
+bunny_foo = Foo()
+little_foo = Foo()
+print(bunny_foo == little_foo)
+>>>False   …?
+Different places in memory, so they aren’t equal
+
+class Currency:
+
+	def __init__(self, currency_code, value):
+		self.value = value
+		self.currency_code = currency_code	
+
+	def __add__(self, other):	
+	pass
+
+
+from currency import Currency
+def test_add_two_currencies():
+	one_dollar = Currency(‘USD’, 1)
+	two_dollars = Currency(‘USD’, 2)
+	result = one_dollar + two_dollars
+	assert result.value == 3
+	assert result.currency_type == ‘USD’
+	assert isinstance(result, Currency)
+
+
+OBJECT ORIENTED PROGRAMMING
+	EVERYTHING IS AN OBJECT
+Everything can be assigned a variable and passed to different functions.
+
+class Animal(object):
+	pass
+
+class Mammal(Animal):
+	pass
+
+class Fish(Animal):
+	pass
+
+class Flying(Animal):
+	pass
+
+class Bird(Flying):
+	pass
+
+class Marsupial(Mammal):
+
+class Koala(Marsupial):
+
+big = Bird()
+isinstance(big, Animal)
+>>> True
+
+koala = Koala()
+isinstance(koala, Bird)
+>>>False
