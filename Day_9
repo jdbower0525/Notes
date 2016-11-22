@@ -1,0 +1,46 @@
+November 3rd
+
+HIGHER ORDER FUNCTIONS
+
+def slow_em_down(callback, *args)
+	print(type(callback))
+	time.sleep(5)
+	return callback(*args)
+
+
+CSV FILES
+	CSV = comma separated value ‘file’
+	type of file
+	students.csv
+
+import csv
+
+
+with open(‘students.csv’) as f:
+	print(f.read())
+	reader = csv.reader(f)
+	header = next(reader)
+	print(header)
+	
+	for row in reader:
+		print(row)
+
+
+with open(‘students.csv’) as f:
+	reader = csv.DictReader(f)
+	for row in reader:
+		print(row)
+(prints out a dictionary with the header as the keys)
+
+YOU NEED ENCODING FOR WEEKEND ASSIGNMENT
+encoding=‘latin_1’
+
+class StockData:
+	def __init__(self, **kwargs
+
+
+
+
+
+def get_avg(**kwargs):
+	float(kwargs[“open”]) + float(kwargs[“close”]) + float(kwargs[“high”] + float(kwargs[“low”] 

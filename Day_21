@@ -1,0 +1,126 @@
+November 21st
+
+REGULAR EXPRESSIONS
+
+clinton@dreisbach.us
+	regex and former python/rails teacher from TIY
+
+import re
+help(re.search)
+
+Help on a function search in module re:
+
+search(pattern, string, flags=0)
+	Scan through string looking for a match to the patter, returning a match object, or None if no match was found.
+
+re.search(r”e”, “hello”)
+	<_sre.SRE_Match object; span=(1,2), match=‘e’>
+
+re.search(r”l”, “hello”)
+	<_sre.SRE_Match object; span=(2,3), match=‘l’>
+
+Matches to the first instance of the search.
+‘r’ means RAW, making it so the correct regex is being searched for.
+
+sentence = (“A symmetry of a pattern is — loosely speaking — a way of transforming “
+	    “the pattern so that the pattern looks exactly the same after the “
+	    “transformation.”)
+re.search(r”pattern”, sentence)
+	<_sre.SRE_Match object; span=(16,23), match=‘pattern’>
+
+re.search gives us a match object for the first match.
+re.findall(“pattern”, sentence)
+>>> [‘pattern’, ‘pattern’, ‘pattern’]
+re.findall(r”at”, sentence)
+>>> [‘at’,‘at’,‘at’,‘at’,‘at’,]
+
+The . (period) character matches anything (except a newline). We can use this to find strings that match wildcards, like “a double-o followed by any character.”
+
+re.search(r”oo.”, sentence)
+re.search(r”\.”, sentence)
+
+	searches for the character ‘.’ because the \ ignores the regex command
+
+case insensitive matching
+re.findall(r”h”, “Hello there! How may I help you?”)
+re.findall(r”h”, “Hello there! How may I help you?”, re.IGNORECASE)
+
+^ matches the beginning of a string.
+$ matches the need of a string
+
+re.search(r”^A “, sentence)
+
+re.search(r”^pattern”, sentence)
+>>> None (because the beginning of the sentence string doesn’t begin with ‘pattern’
+
+re.search(r”n.$”, sentence)
+searching for an ’n’ and anything else at the end of the string
+
+* matches 0 or more
++ matches 1 or more
+? matches 0 or 1
+{n} matches n repetitions
+{m,n} matches m to n repetitions. You can leave out m or n to match 0 to n, or m to infinity.
+
+
+
+re.findall(r”o+”, sentence)
+[‘o’, ‘oo’, ‘o’]
+
+re.findall(r”ng? “, sentence)
+[’n ‘, ‘ng ‘, ’n ‘, ’n ‘]
+
+re.search(r”a*b”, “b”)
+re.search(r”a*b”, “ab”)
+
+LOOKS LIKE	
+def find_zero_or_one_as_and_a_b(string):
+	for idx, letter in enumberate(string):
+		if letter == “b”:
+			if idx == 0:
+				return letter
+			else:
+				prev_letter = string[idx-1]
+				if prev_letter == “a”:
+					return prev_letter + letter
+
+
+Matching sets of things
+[abz] will match an a, b, or z.
+[A-Z] matches a range of letters from A to Z.
+[^A-Z] matches anything that ISN’T A to Z.
+
+Get words three to five letters long
+re.findall(r” [A-Za-z]{3,5} “)
+Finds the first number in a string
+re.search(r”[0-9]+”, “I ate 140 ghost peppers”)
+re.findall(r”[\.,;?!]”, sentence)
+	OR
+re.findall(r”[^A-Za-z0-9 ]”, sentence)
+
+#find a phone number
+re.search(r”[0-9]{3} - [0-9]{3} - [0-9]{4}”, “My phone number is 919-222-1212”)
+
+CHARACTER CLASSES
+\d matches digits
+\D matches non-digits 
+\w matches”word characters”: basically [a-zA-Z0-9_] plus all other valid Unicode characters that can be in words.
+\W matches non-word characters
+\s matches space characters
+\S matches non-space characters
+
+#find a phone number
+re.search(r”\d{3}-\d{3}-\d{4})
+
+\A matches the beginning of the string. This is a lot like ^, but different for multi-line strings.
+\Z matches the end of the string. This is a lot like $, but different for multi-line strings
+\b matches a word boundary. This means it matches an empty string at the end of a word
+
+Get words three to five letters long
+re.findall(r”\b\w{3,5}\b, sentence)
+e-mails
+re.search(r“\A\w+@\w+\.\w{2,3}\Z”)
+
+CAPTURING MATCHES
+		
+

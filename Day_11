@@ -1,0 +1,26 @@
+November 7th
+
+Homework Review
+def top_x_movies(x):
+	avg_ratings = {}
+	for movie in movie_dict.values():
+		avg = avg_rating_by_movie_id(movie.movie_id)
+		avg_ratings[movie.title] = avg
+	for title, avg_rating in sorted(avg_ratings.items(), key = lambda x: print(x)):
+		print(title, avg_rating)
+
+def similarity(u1,u2):
+	same_list = []
+	for u1_rating in rdbu[u1]:
+		for u2_rating in rdbu[u2]:
+			if u1_rating.movie_id == u1_rating.movie_id:
+				same_list.append((u1_rating, u2_rating))
+	ed = euclidean_distance([r[0].rating for r in same_list],
+				  [r[1].rating for r in same_list])
+def euclidean_distance(v,w):
+	pass
+
+def most_similiar_user(user_id):
+
+Q/A
+I

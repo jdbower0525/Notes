@@ -1,0 +1,27 @@
+November 9th
+
+
+HIGHER ORDER FUNCTIONS
+
+Lambda:
+def print_dictionary_sorted_by_value(d):
+	for key, value in sorted(d.items(), key = lambda x: x[1][-1])
+		print(key, value)
+
+Map:
+times_two = lambda x: x* 2
+numbers = [1,2,3,4,5]
+numbers_times_two = map(times_two, numbers)
+list(numbers_times_two)
+
+Filter:
+fibs = [0,1,1,2,3,5,8,13,21,34,55]
+odd_fibs = filter(lambda x: x % 2, fibs)
+even_fibs = filter(lambda x: x % 2 == 0, fibs)
+
+Reduce:
+reduce(lambda x, y: x+y [47, 11, 42, 13]
+47 11
+58 42
+100 13
+113

@@ -1,0 +1,105 @@
+November 2nd
+
+LIST COMPREHENSION
+one_thousand = list(range(1001))
+divisible_by_7 = []
+for num in one_thousand:
+	if num % 7 == 0:
+		new_list.append(num) 
+
+print(new_list)
+
+another_new_list = [x for x in one_thousand if x % 7 == 0]
+ORRRRR [‘hi mom’ for x in one_thousand if x % 7 == 0]
+
+ten = range(10)
+[x**2 for x in ten]
+[x**2 for x in ten if x % 2]
+
+with open(“/usr/share/dict/words”) as f:
+	word_list = f.read().split()
+	[word for word in word_list if “q” in word]
+	[word for word in word_list if “q” in word and “z” in word]
+	[word.upper() for word in word_list if “q” in word and “z” in word]
+
+lov = “aeiouAEIOU”
+[“”.join([letter.upper() if letter in love else letter.lower() for letter in word] for word in word_list if “q” in word and “z” in word]
+
+
+def upper_vowels(word):
+	lov = “aeiouAEIOU”
+	wl = [letter.upper() if (letter in love) else letter.lower() for letter in word]
+	return “”.join(wl)
+
+def get_even_odd_str(x):
+	return “odd” if x % 2 else “even”
+{integer:get_even_odd(integer) for integer in ten}
+
+{x for x in list(ten) * 100}
+
+set1 = set([“cat”, “dog”])
+set2 = set([“dog”, “mouse”]
+
+
+
+ARGS AND KWARGS
+def function1(parameter):
+	return 5
+def function2(this, that, the, other):
+	return 5
+
+def splat_args_function(positional_arg, *many_args):
+	print(type(many_args))
+
+function(“a”, “b”, “c”)
+
+def function(positional, *many_args)
+
+def three_positional_args_func(one, two, three):
+	print(one)
+	print(two)
+	print(three)
+
+three_positional_args_func(beer, coffee, water)
+ORRRR three_positional_args_func(beer = two, coffee = one, water = three)
+
+def print_args(*args):
+	for index, arg in enumberate(args):
+		print(“{} {}”.format(index, arg))
+print_args(“coffee”, “beer”, “water”, “OJ”, “Milk”, “whiskey”)
+
+def ex_key_word_args(**kwargs):
+	print(type(kwargs))
+
+ex_key_word_args()
+>>> (class ‘dict’)
+ex_key_word_args(key=“value”, amount = 4, blah=‘di’)
+	{‘blah’: ‘di’, ‘amount’: 4, ‘key’:’value’}
+
+print(*range(10), end = “I’m done!”, sep= “ <—> “)
+
+def our_own_print(*to_print, end=“\n”, sep=“ “)
+	return sep.join([str(to_print)for elem in to_print]) + end
+
+our_own_print(5,6,7, end=“I’m done!”, sep= “ <—> “)
+
+
+
+
+ENUMERATE AND ZIP
+my_list = [“coffee”, “beer”, “water”]
+for index, value in enumerate(my_list):
+	print(index, value)
+(0, coffee)
+(1, beer)
+(2, water)
+
+enumerate of a list returns an utterable of tuples with the 0th element 
+being the index and the 1th element being the value from the list.
+
+for lhs, rhs in zip([“coffee”, “beer”, “water”], [“best”, “good”, “ok”])
+	print(lhs, rhs)
+coffee best
+beer good
+water ok
+
