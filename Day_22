@@ -1,3 +1,157 @@
 November 22nd
 
 JAVASCRIPT
+
+Javascript is ‘event based’
+	some functions wait till outside interaction before running.
+
+Syntax Differences
+Opening console in web browser to plug in commands
+C-ish language
+
+not necessarily ending with semi colons, but for the most part need to
+
+type/typeof(5.5)
+5.5 and 5 are both numbers instead of floats and ints
+basic arithmetic works naturally
+1+1;
+10*2;
+including uneven division and modulo
+type of (NaN) (not a number)
+‘number’
+booleans are lower case
+true;
+
+equality is === inequality is !==
+1 === 1
+1 !== ‘1’
+1 == ‘1’
+
+“hi” + “mom” + 5 + 6 vs. 5 + 6 + “hi” + “mom”
+
+null == undefined; = true
+null === undefined; = false
+
+.charAt(0) (same as indexes)
+can also use [3]
+“string”.length = 6
+“Hello world”.substring(0,5) = “hello”
+
+variables are defined with var someVar = 5;
+without the ‘var’ the variable is named globally
+variables declared without being assigned are set to undefined
+if you want to declare a couple of variables, use a comma separator
+var someFourthVar = 2, someFifthVar = 4;
+performing math on variables
+someVar += 5;
+someVar *= 10;
+adding or subtracting 1
+numVar++ prints value then adds one
+++numVar adds one then prints value
+adding values to Array
+myArray.push(“world”)
+Arrays know their length
+myArray.length
+
+in javascript, objects and dictionaries are the same thing
+
+because dictionaries are objects, they know their attributes
+myObj.favString
+“hi”
+
+console.log = print in javascript
+console.log(“this is print in javascript”)
+if ( 5 === 5 ) {console.log(“here”)}
+
+if (count == 3){
+	this is run if count = 3
+} else if (count == 4){
+	this is run if count = 4
+} else {
+	this is run if neither 3 or 4
+}
+
+while (true){
+	infinite loop
+}
+do {
+	input = getInput();
+} while (!isValid(input))
+
+for loop
+for (var i = 0; i < 5; i++){
+
+}
+
+function doSomething(){ console.log(“print me”) }
+doSomething()
+“print me”
+
+var i=0
+for (var i = 0 ; i < 5; i++) {console.log(i)}
+loops general syntax
+for(var i = init(); test(i, 5); i = update(i))
+
+|| = or
+&& = and
+
+if(color == “red” || color == “blue”){
+
+}
+
+grade = ‘B’;
+switch (grade){
+	case ‘A’:
+		console.log(“great Job”);
+		break;
+	case ‘B’:
+		console.log(“OK job”);
+		break;
+	case ‘C’:
+		console.log(“you can do better”);
+		break;
+	default:
+		console.log(“oy vey”);
+		break;
+}
+
+.js
+function showUserIn(){
+	#brings up a pop-up for prompt
+	userIn = prompt(“what do you want?”)
+	console.log(userIn)
+
+<input id=“UserInput
+
+console.log(document.getElementById(“UserInput”).value
+
+
+
+
+BOOTSTRAP DEMO
+link to bootstrap cdn
+<link rel=‘stylesheet’ href=“http://url.com”>
+12 columns across
+<div class=“container”>
+	<div class=“row”>
+		<div class=“col-md-1”>1</div>
+		<div class=“col-md-1”>2</div>
+		<div class=“col-md-1”>
+		<div class=“col-md-1”>
+		<div class=“col-md-1”>
+		<div class=“col-md-1”>
+		<div class=“col-md-1”>
+		<div class=“col-md-1”>
+		<div class=“col-md-1”>
+		<div class=“col-md-1”>
+		<div class=“col-md-1”> 
+
+
+
+
+
+
+
+
+
+		<div class=“col-md-4”> (md is the column resizing)(also has sm and lg)(takes 4 columns)
