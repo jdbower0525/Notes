@@ -1,2 +1,99 @@
 November 28th
 
+Finding highest value in a list. (Practice)
+
+def most(the_list):
+	return [item for item in the_list if score(item) > max_score][0]
+
+or
+	return sorted(the_list, key=score)[-1]
+
+CACHING
+Making data available in different avenues, basically used to speed up a process after doing it once.
+BEWARE PREMATURE OPTIMIZATION
+from cache import Cache
+
+
+
+class Cache:
+    def __init__(self):
+        self.dict = {}
+
+    def get(self, key):
+        return self.dict.get(key)
+
+    def set(self, key, value):
+        self.dict[key] = value
+
+    def clear(self):
+        self.dict = {}
+
+    def has_key(self, key):
+        return key in self.dict
+
+    def __contains__(self, key):
+        return key in self.dict
+
+    def __iter__(self):
+        return iter(self.dict.items())
+
+    def __len__(self):
+        return len(self.dict)
+
+APIs (Application program interface)
+JSON Javascript Object Notation (basically a dictionary in javascript)
+
+import requests
+r = requests.get(‘https://www.python.org')
+r.status_code
+>>> 200
+
+API in the url, then with table and ID.
+http://swapi.co/api/planets/2
+
+r = requests.get(“http://swapi.co/api/people/1/“)
+r.status_code
+>>> 200
+r.text
+>>>JSON LIST
+
+r.json()[“height”]
+r.json()[“birth_year”]
+
+postman for making API requests
+cast_list.py
+import requests
+import json
+
+url = “http://swapi.co/api/people”
+
+r = requests.get(“http://swapi.co/api/people/2/“)
+print(json.dumps(r.json(), indent=4))
+def get_all_people():
+	url = “http://swapi.co/api/people/“
+	r = requests.get(url)
+	print(json.dumps(r.json(), indent=4))
+
+while r.json()[“next”]:
+
+
+def find_person(who, people):
+	for person in people:
+		if person[’name’].lower() == who.lower():
+			print(person)
+
+people = get_all_people()
+
+find_person(input(“who would you like to find? “), people)
+
+caching apis
+with open(“swapi_cache_people”.json”, “w”) as f:
+	f.write(json.dumps(results, indent=4))
+
+filename=“swapi_cache_people.json”
+if os.path.isfile(filename):
+
+
+with open(filename, “r”) as f:
+	results = json.loads(f.read())
+
