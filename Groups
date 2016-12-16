@@ -1,0 +1,48 @@
+Group Project
+
+
+triangle uxpa, (triuxpa.org)
+‘changing the triuxpa website into a community’
+
+
+
+Show and tell
+
+Studies for user interaction, user testing, framework and design
+knowing user intuition, responsiveness
+flow and usage of the app, ‘does the website function the way they’re expecting it to work’
+correct color theory, color contrast
+
+
+
+Ashley
+	Good Reads = Complete redesign of goodreads personal bookshelf…  multiple navbars, pulling images and having pullovers for single page html.  
+	mouseover & hover, search functions populating by what they’ve read and what full lists.  A lot of movie lens type.
+	solid amounts of hard coding, SASS, nested version of style sheets.  Pre-processed style sheets.  Almost like a backend stylesheet (css version of handlebars)
+	not using mouseover data, any data associated with the page isn’t stored.  
+	heavy single page pagination
+	if/else in javascript
+	static images from local host
+
+Lina	
+	living conservatory - reconstructing museum html
+	basic CSS< background imaging, interactive popups and buttons, populating popups dynamically
+	changing responsiveness to screen size
+	branchless bank - basic functionality
+	good reads = dropdown/navbar, design differences
+
+	
+Sanjid
+	Good Reads = dj css, little interaction, dropdown resizing, recommendations
+	clickable overlays, modal detail page
+	filtering options, going through long list of pieces of data
+	proof of concept, responsive to resizing
+	resizing bootstrap navbar
+	javascript/jquery modals
+
+Eloisa
+    BranchlessBank - visuals for a mobile app, depositing a check using a mobile app.
+	login html, no interaction with databases or authentication/authorization.
+	apps made through invisionapp.com, automatic pagination through images/html/css without any buttonn.click() styles.
+	no code, step through and framework for a project, hotspots on the website aren’t full functionality buttons but shows a little interaction without the code.
+	proof of concept

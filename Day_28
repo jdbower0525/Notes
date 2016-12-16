@@ -1,0 +1,10 @@
+December 1st
+
+Generating REST APIs with the django framework
+
+Gets, Posts, Put, Delete
+
+Gets - ‘read’
+Posts - ‘create’
+Put - ‘update’
+Delete - ‘delete’
